@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cart</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Your Cart</h1>
+    
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+        
+        
+            <a href="cart.html">
+                Cart <span id="cartCount">(0)</span>
+            </a>
+        </nav>
+    </header>
+
+    <div class="cart-container">
+
+        <div class="cart-items">
+            <div id="cartItems"></div>
+        </div>
+    
+        <div class="order-summary">
+    
+            <h2>Order Summary</h2>
+    
+            <div class="summary-row">
+                <span>Subtotal</span>
+                <span id="subtotalPrice">$0</span>
+            </div>
+    
+            <div class="summary-row">
+                <span>Shipping</span>
+                <span>$10</span>
+            </div>
+    
+            <div class="summary-total">
+                <span id="totalPrice">$0</span>
+            </div>
+
+            
+            <a href="checkout.html" class="btn checkout-btn">
+                Proceed to Checkout
+            </a>
+    
+        </div>
+    
+    </div>
+
+<script src="js/products.js"></script>
+<script src="js/store.js"></script>
+<script src="js/cart.js"></script>
+<script>
+renderCart();
+</script>
+<div id="toast"></div>
+</body>
+</html>

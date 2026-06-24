@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Furniture Store</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Luxury Furniture</h1>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+
+
+            <a href="cart.html">
+                Cart <span id="cartCount">(0)</span>
+            </a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Modern Furniture Collection</h2>
+        <p>Discover premium furniture for your home.</p>
+        <a href="products.html" class="btn">Shop Now</a>
+    </section>
+
+    <section class="featured">
+        <h2>Featured Products</h2>
+        <div id="featuredProducts" class="products-grid"></div>
+    </section>
+
+    <script src="js/products.js"></script>
+    <script src="js/store.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            loadFeaturedProducts();
+            updateCartCount();
+        });
+    </script>
+
+    <div id="toast"></div>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Furniture Store</h1>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+    
+        <input type="text" id="searchInput" placeholder="Search products...">
+    
+        <a href="cart.html">
+            Cart <span id="cartCount">(0)</span>
+        </a>
+    </nav>
+</header>
+
+<h2 class="title">All Products</h2>
+<div class="filters">
+    <button onclick="filterProducts('all')">All</button>
+    <button onclick="filterProducts('sofa')">Sofas</button>
+    <button onclick="filterProducts('bed')">Beds</button>
+    <button onclick="filterProducts('chair')">Chairs</button>
+    <button onclick="filterProducts('table')">Tables</button>
+</div>
+<div id="productsContainer" class="products-grid"></div>
+
+<script src="js/products.js"></script>
+<script src="js/store.js"></script>
+
+<script>
+renderProducts();
+</script>
+<div id="toast"></div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Product Details</h1>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+
+        <a href="cart.html">
+            Cart <span id="cartCount">(0)</span>
+        </a>
+    </nav>
+</header>
+
+<div class="product-page">
+
+    <div id="productDetails"></div>
+
+</div>
+
+<script src="js/products.js"></script>
+<script src="js/store.js"></script>
+
+<script>
+loadProductPage();
+updateCartCount();
+</script>
+
+<div id="toast"></div>
+
+</body>
+</html>
