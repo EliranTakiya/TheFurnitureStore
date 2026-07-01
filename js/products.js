@@ -44,11 +44,64 @@ const products = [
 ];
 
 function renderProducts() {
+
     const container = document.getElementById("productsContainer");
     container.innerHTML = "";
 
-    products.forEach(product => {
+    // 1. default products (hardcoded)
+    const defaultProducts = [
+        {
+            id: 1,
+            name: "Modern Sofa",
+            price: 899,
+            category: "sofa",
+            image: "https://picsum.photos/400/300?random=1"
+        },
+        {
+            id: 2,
+            name: "Wooden Dining Table",
+            price: 1200,
+            category: "table",
+            image: "https://picsum.photos/400/300?random=2"
+        },
+        {
+            id: 3,
+            name: "Luxury Bed",
+            price: 1500,
+            category: "bed",
+            image: "https://picsum.photos/400/300?random=3"
+        },
+        {
+            id: 4,
+            name: "Office Chair",
+            price: 250,
+            category: "chair",
+            image: "https://picsum.photos/400/300?random=4"
+        },
+        {
+            id: 5,
+            name: "TV Stand",
+            price: 499,
+            category: "table",
+            image: "https://picsum.photos/400/300?random=5"
+        },
+        {
+            id: 6,
+            name: "Coffee Table",
+            price: 299,
+            category: "table",
+            image: "https://picsum.photos/400/300?random=6"
+        }
+    ];
 
+    // 2. products added from admin
+    let adminProducts = JSON.parse(localStorage.getItem("products")) || [];
+
+    // 3. merge both
+    let allProducts = [...defaultProducts, ...adminProducts];
+
+    // 4. render
+    allProducts.forEach(product => {
 
         container.innerHTML += `
         <div class="product-card" onclick="openProduct(${product.id})">
