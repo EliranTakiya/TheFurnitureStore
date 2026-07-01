@@ -1,23 +1,20 @@
 const loginForm = document.getElementById("loginForm");
 const errorMessage = document.getElementById("errorMessage");
 
-loginForm.addEventListener("submit", function (e) {
-
+document.getElementById("loginForm").addEventListener("submit", function(e) {
     e.preventDefault();
 
-    const username = document.getElementById("username").value.trim();
-    const password = document.getElementById("password").value.trim();
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
 
     if (username === "admin" && password === "admin123") {
 
         localStorage.setItem("loggedIn", "true");
 
-        window.location.href = "dashboard.html";
-
+        // redirect after login
+        window.location.href = "dashboard.html"; 
+        // or "products.html"
     } else {
-
-        errorMessage.textContent = "Invalid username or password.";
-
+        document.getElementById("errorMessage").innerText = "Invalid login";
     }
-
 });
