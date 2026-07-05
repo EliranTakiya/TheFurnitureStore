@@ -18,3 +18,4 @@ document.getElementById("loginForm").addEventListener("submit", function(e) {
         document.getElementById("errorMessage").innerText = "Invalid login";
     }
 });
+
